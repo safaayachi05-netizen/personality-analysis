@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personality test:</title>
+    <link rel="stylesheet" href="CSS/style.PA.css">
+</head>
+<body>
+
+<div class="app">
+
+    <section class="screen active" id="screen-1">
+        <div class="logo">
+            <img src="img/cd18572fc51b46567c6e7d79a164ffda.jpg" alt="icon">
+        </div>
+        <h1>اكتشف شخصيتك</h1>
+        <p class="subtitle">أجب على بعض الأسئلة ونحلل شخصيتك بالذكاء الاصطناعي</p>
+        
+        <div class="input-group">
+            <label>اسمك</label>
+            <input type="text" id="username">
+        </div>
+        <div class="input-group">
+            <label>تاريخ ميلادك</label>
+            <input type="date">
+        </div>
+        <button class="next-btn" onclick="nextScreen(1)"> التالي ←</button>
+    </section>
+
+    <section class="screen" id="screen-2">
+        <div class="icon">⚡</div>
+        <h2>في مواقف الضغط...</h2>
+        <p class="question">كيف تتصرف عادة عندما تواجه موقفاً صعباً؟</p>
+        
+        <div class="answers">
+            <div class="card" data-category="B" onclick="selectCard(this)">
+                <span>🧠</span> <p>أفكر بهدوء وأضع خطة</p>
+            </div>
+            <div class="card" data-category="A" onclick="selectCard(this)">
+                <span>⚡</span> <p>أتصرف بسرعة وأبحث عن حل فوري</p>
+            </div>
+            <div class="card" data-category="D" onclick="selectCard(this)">
+                <span>🌿</span> <p>أنسحب وأحتاج وقتاً لنفسي</p>
+            </div>
+            <div class="card" data-category="C" onclick="selectCard(this)">
+                <span>💬</span> <p>أتحدث مع شخص أثق به</p>
+            </div>
+        </div>
+        <button class="next-btn" onclick="nextScreen(2)">التالي ←</button>
+    </section>
+
+    <section class="screen" id="screen-3">
+        <div class="icon">🎯</div>
+        <h2>ما يحركك في الحياة...</h2>
+        <p class="question">ما الذي يمنحك الطاقة و الدافع للاستمرار؟</p>
+        
+        <div class="answers">
+            <div class="card" data-category="A" onclick="selectCard(this)">
+                <span>🏆</span> <p>تحقيق الاهداف و النجاح</p>
+            </div>
+            <div class="card" data-category="C" onclick="selectCard(this)">
+                <span>❤️</span> <p>العلاقات الانسانية العميقة</p>
+            </div>
+            <div class="card" data-category="D" onclick="selectCard(this)">
+                <span>🎨</span> <p>الابداع والتعبير عن نفسي</p>
+            </div>
+            <div class="card" data-category="B" onclick="selectCard(this)">
+                <span>🌍</span> <p>الحرية والاستكشاف والتجارب</p>
+            </div>
+        </div>
+        <button class="next-btn" onclick="nextScreen(3)">التالي ←</button>
+    </section>
+
+    <section class="screen" id="screen-4">
+        <div class="icon">🌙</div>
+        <h2>في وقت فراغك...</h2>
+        <p class="question">ماذا تفعل غالبا عندما لا يكون لديك التزامات؟</p>
+        
+        <div class="answers">
+            <div class="card" data-category="B" onclick="selectCard(this)">
+                <span>📚</span> <p>أقرا أو أتعلم شيئا جديدا</p>
+            </div>
+            <div class="card" data-category="C" onclick="selectCard(this)">
+                <span>👥</span> <p>أجتمع مع الاضدقاء والعائلة</p>
+            </div>
+            <div class="card" data-category="A" onclick="selectCard(this)">
+                <span>🎮</span> <p>أمارس هوايةأو رياضة </p>
+            </div>
+            <div class="card" data-category="D" onclick="selectCard(this)">
+                <span>🎵</span> <p>أستريح وأستمع الى الموسيقى</p>
+            </div>
+        </div>
+        <button class="next-btn" onclick="calculateResult()">حلل شخصيتي🔮</button>
+    </section>
+
+    <section class="screen" id="result-screen">
+        <div class="icon">✨</div>
+        <h2>النتيجة التحليلية</h2>
+        <div id="result-text"></div>
+    </section>
+
+</div>
+<script src="javascript/script3.js"></script>
+</body>
+</html>

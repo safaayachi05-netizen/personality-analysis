@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Cairo",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:radial-gradient(circle,#eedaff,#eedaff)
+}
+
+.app{
+    width:390px;
+    max-width:95%;
+}
+.screen{
+    background:(#cb91ff);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(115, 23, 177, 0.08);
+    border-radius:30px;
+    padding:30px 24px;
+    color:white;
+    text-align:center;
+    box-shadow:
+    0 0 30px rgba(255, 161, 236, 0.822);
+}
+.screen .active{
+    display: block;
+}
+
+.logo img{
+    width:70px;
+    margin-bottom:20px;
+}
+
+h1,h2{
+    font-size:2rem;
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.subtitle,
+.question{
+    color:#000000;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.input-group{
+    text-align:right;
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#fff;
+}
+
+input{
+    width:100%;
+    height:58px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    padding:0 18px;
+    background:#f08dd4;
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.answers{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:30px;
+}
+
+.card{
+    background:#f08dd4;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#f08dd4;
+}
+
+.card span{
+    font-size:1.8rem;
+    margin-bottom:12px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+.next-btn{
+    width:100%;
+    height:60px;
+    border:none;
+    cursor:pointer;
+    margin-top:30px;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+
+    background:
+    linear-gradient( 90deg, #f08dd4, #70f2ff);
+    box-shadow:
+    0 0 20px rgba(80,180,255,.5);
+}
